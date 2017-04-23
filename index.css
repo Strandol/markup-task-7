@@ -1,0 +1,485 @@
+body
+{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    background: #d9d9d9;
+    text-align: center;
+    margin: 0;
+}
+
+input[name='cats_kind']
+{
+    display: none;
+}
+
+.wrapper
+{
+    justify-content: center;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 60% 1fr;
+    grid-template-areas: 'a b c' 'p p p';
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.wrapper div:nth-child(1)
+{
+    grid-area: a;
+}
+
+.wrapper div:nth-child(2)
+{
+    grid-area: b;
+}
+
+.wrapper div:nth-child(3)
+{
+    grid-area: c;
+}
+
+.wrapper div:nth-child(4)
+{
+    grid-area: p;
+}
+
+.wrapper__list
+{
+    width: 100%;
+    background: #aba8a8;
+}
+
+.wrapper__list ul
+{
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    border-bottom: 2px solid #8d8585;
+    box-sizing: border-box;
+}
+
+.wrapper__list ul li
+{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 25px;
+    padding: 20px;
+    border-bottom: 2px solid #d5cfcf;
+    border-top: 2px solid #8d8585;
+    cursor: pointer;
+}
+
+.wrapper__list ul label:first-child li
+{
+    border-top: none;
+}
+
+.wrapper__list ul label:hover
+{
+    background: #93939a;
+}
+
+.wrapper__list label
+{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+input[id='Abissinskaya']:checked ~ .wrapper .wrapper__list label[for='Abissinskaya'],
+input[id='Britanskaya']:checked ~ .wrapper .wrapper__list label[for='Britanskaya'],
+input[id='Siamskaya']:checked ~ .wrapper .wrapper__list label[for='Siamskaya'],
+input[id='Russian_blue']:checked ~ .wrapper .wrapper__list label[for='Russian_blue']
+{
+    background: #85858f;
+}
+
+input[id='Abissinskaya']:checked ~ .wrapper .wrapper__content section:not([class='Abissinskaya']),
+input[id='Britanskaya']:checked ~ .wrapper .wrapper__content section:not([class='Britanskaya']),
+input[id='Siamskaya']:checked ~ .wrapper .wrapper__content section:not([class='Siamskaya']),
+input[id='Russian_blue']:checked ~ .wrapper .wrapper__content section:not([class='Russian_blue'])
+{
+    opacity: .3;
+}
+
+.wrapper__content
+{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-template-areas:
+        'c1 c2 c2'
+        'c3 c4 c5'
+        'c6 c6 c7'
+        'c8 c8 c8';
+}
+
+.wrapper__content section
+{
+    position: relative;
+    display: inline-block;
+    margin: 8px;
+}
+
+.wrapper__content section img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper__content section:nth-child(3)
+{
+    grid-area: c1;
+    margin-top: 0px;
+}
+
+.wrapper__content section:nth-child(5)
+{
+    grid-area: c2;
+    margin-top: 0px;
+}
+
+.wrapper__content section:nth-child(1)
+{
+    grid-area: c3;
+}
+
+.wrapper__content section:nth-child(8)
+{
+    grid-area: c4;
+}
+
+.wrapper__content section:nth-child(2)
+{
+    grid-area: c5;
+}
+
+.wrapper__content section:nth-child(6)
+{
+    grid-area: c6;
+}
+
+.wrapper__content section:nth-child(7)
+{
+    grid-area: c7;
+}
+
+.wrapper__content section:nth-child(4)
+{
+    grid-area: c8;
+    margin-bottom: 0px;
+}
+
+.wrapper__content section:hover::after
+{
+    content: '';
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 18px;
+    width: 60%;
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 5px;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.wrapper__content section:nth-child(1):hover::after
+{
+    content: 'Мау, 8 годиков';
+}
+
+.wrapper__content section:nth-child(2):hover::after
+{
+    content: 'Кеша, 4 годика';
+}
+
+.wrapper__content section:nth-child(3):hover::after
+{
+    content: 'Кассандра, 2 годика';
+}
+
+.wrapper__content section:nth-child(4):hover::after
+{
+    content: 'Патрик, 1 годик';
+}
+
+.wrapper__content section:nth-child(5):hover::after
+{
+    content: 'Соня, 2 годика';
+}
+
+.wrapper__content section:nth-child(6):hover::after
+{
+    content: 'Рыжик, 1.5 годика';
+}
+
+.wrapper__content section:nth-child(7):hover::after
+{
+    content: 'Марс, 3 годика';
+}
+
+.wrapper__content section:nth-child(8):hover::after
+{
+    content: 'Патрик, 1 годик';
+}
+
+.wrapper__rating
+{
+    position: relative;
+    text-align: left;
+    align-self: baseline;
+    background: #aba8a8;
+    padding-left: 5%;
+}
+
+.wrapper__rating h3
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    color: #f24a4a;
+}
+
+.wrapper__rating span
+{
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.one-rating,
+.two-rating,
+.three-rating,
+.four-rating
+{
+    display: inline-block;
+    height: 15px;
+    background: linear-gradient(to right, rgba(248,80,50,1) 0%,
+        rgba(241,111,92,1) 0%, rgba(240,47,23,1) 11%,
+        rgba(230,61,39,1) 24%, rgba(241,111,92,1) 48%,
+        rgba(245,245,245,1) 89%, rgba(245,245,245,1) 100%);
+    margin-bottom: 10px;
+}
+
+.five-rating,
+.six-rating,
+.seven-rating,
+.eight-rating
+{
+    display: inline-block;
+    height: 15px;
+    background: linear-gradient(to right, rgba(217,230,30,1) 0%,
+        rgba(218,232,25,1) 0%, rgba(240,229,24,1) 9%,
+        rgba(224,230,39,1) 30%, rgba(230,240,93,1) 56%,
+        rgba(245,245,245,1) 89%, rgba(245,245,245,1) 100%);
+    margin-bottom: 10px;
+}
+
+.nine-rating,
+.ten-rating
+{
+    display: inline-block;
+    height: 15px;
+    background: linear-gradient(to right, rgba(38,230,21,1) 0%,
+        rgba(25,230,39,1) 0%, rgba(83,230,25,1) 17%,
+        rgba(39,230,45,1) 54%, rgba(46,209,38,1) 75%,
+        rgba(245,245,245,1) 89%, rgba(245,245,245,1) 100%);
+    margin-bottom: 10px;
+}
+
+div[class*='-rating']:after
+{
+    position: absolute;
+    right: 5%;
+}
+
+.one-rating
+{
+    width: 25%;
+}
+
+.one-rating:after
+{
+    content: '1';
+}
+
+.two-rating
+{
+    width: 30%;
+}
+
+.two-rating:after
+{
+    content: '2';
+}
+
+.three-rating
+{
+    width: 35%;
+}
+
+.three-rating:after
+{
+    content: '3';
+}
+
+
+.four-rating
+{
+    width: 40%;
+}
+
+.four-rating:after
+{
+    content: '4';
+}
+
+.five-rating
+{
+    width: 44%;
+}
+
+.five-rating:after
+{
+    content: '5';
+}
+
+.six-rating
+{
+    width: 50%;
+}
+
+.six-rating:after
+{
+    content: '6';
+}
+
+.seven-rating
+{
+    width: 55%;
+}
+
+.seven-rating:after
+{
+    content: '7';
+}
+
+.eight-rating
+{
+    width: 60%;
+}
+
+.eight-rating:after
+{
+    content: '8';
+}
+
+.nine-rating
+{
+    width: 75%;
+}
+
+.nine-rating:after
+{
+    content: '9';
+}
+
+.ten-rating
+{
+    width: 80%;
+}
+
+.ten-rating:after
+{
+    content: '10';
+}
+
+.rating__flexbox
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='one']
+{
+    order: 10;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='two']
+{
+    order: 9;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='three']
+{
+    order: 8;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='four']
+{
+    order: 7;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='five']
+{
+    order: 6;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='six']
+{
+    order: 5;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='seven']
+{
+    order: 4;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='eight']
+{
+    order: 3;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='nine']
+{
+    order: 2;
+}
+
+.wrapper .wrapper__rating input[id='sort_by_low']:checked ~ .rating__flexbox div[class='ten']
+{
+    order: 1;
+}
+
+.wrapper .wrapper__rating label[for='sort_by_low']
+{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.wrapper__footer
+{
+    width: 100%;
+    height: 55px;
+    position: relative;
+    top: 50px;
+    border-top: 1px solid black;
+}
+
+.wrapper__footer address
+{
+    height: 100%;
+}
+
+.wrapper__footer .author
+{
+    position: absolute;
+    left: 5%;
+    top: 35%;
+}
+
+.wrapper__footer .address
+{
+    position: absolute;
+    right: 5%;
+    top: 35%;
+}

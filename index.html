@@ -1,8 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <title>Бабуленькины котятки</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Condensed" rel="stylesheet">
 </head>
 <body>
+    <h2 class="title">Бабуленькины котятки</h2>
+    <input id="Abissinskaya" type="checkbox" name="cats_kind" value="Abissinskaya">
+    <input id="Britanskaya" type="checkbox" name="cats_kind" value="Britanskaya">
+    <input id="Siamskaya" type="checkbox" name="cats_kind" value="Siamskaya">
+    <input id="Russian_blue" type="checkbox" name="cats_kind" value="Russian blue">
+    <div class="wrapper">
+        <div class="wrapper__list">
+            <ul>
+                <label for="Abissinskaya">
+                    <li>
+                        Абиссинская
+                    </li>
+                </label>
+                <label for="Britanskaya">
+                    <li>
+                        Британская
+                    </li>
+                </label>
+                <label for="Russian_blue">
+                    <li>
+                        Русская голубая
+                    </li>
+                </label>
+                <label for="Siamskaya">
+                    <li>
+                        Сиамская
+                    </li>
+                </label>
+            </ul>
+        </div>
+        <div class="wrapper__content">
+            <section class="Abissinskaya">
+                <img src="src\img\abis_cat1.jpg" alt="Абиссинская кошка">
+            </section>
+            <section class="Abissinskaya">
+                <img src="src\img\abis_cat2.jpg" alt="Абиссинская кошка">
+            </section>
+            <section class="Britanskaya">
+                <img src="src\img\brit_cat1.jpg" alt="Британская кошка">
+            </section>
+            <section class="Britanskaya">
+                <img src="src\img\brit_cat2.jpg" alt="Британская кошка">
+            </section>
+            <section class="Russian_blue">
+                <img src="src\img\russian_blue_cat1.jpg" alt="Русская голубая кошка">
+            </section>
+            <section class="Russian_blue">
+                <img src="src\img\russian_blue_cat2.jpg" alt="Русская голубая кошка">
+            </section>
+            <section class="Siamskaya">
+                <img src="src\img\siamskaya_cat_1.jpg" alt="Сиамская кошка">
+            </section>
+            <section class="Siamskaya">
+                <img src="src\img\siamskaya_cat_2.jpg" alt="Сиамская кошка">
+            </section>
+        </div>
+        <div class="wrapper__rating">
+            <h3>Рейтинг</h3>
+            <label for="sort_by_low">по убыванию</label>
+            <input id="sort_by_low" type="checkbox" name="bylow">
+            <div class="rating__flexbox">
+                <div class="nine">
+                    <span>Британская</span>
+                    <div class="nine-rating"></div>
+                </div>
+                <div class="four">
+                    <span>Сиамская</span>
+                    <div class="four-rating"></div>
+                </div>
+                <div class="eight">
+                    <span>Русская голубая</span>
+                    <div class="eight-rating"></div>
+                </div>
+                <div class="ten">
+                    <span>Абиссинская</span>
+                    <div class="ten-rating"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper__footer">
+        <address>
+            <span class="author">
+                &copy; ООО Бабуленькины котятки, 2015
+            </span>
+            <span class="address">
+                Наш адрес: улица Котовая, д.5
+            </span>
+        </address>
+    </div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 # Задача «Бабуленькины котятки»
-
+## <a href="https://strandol.github.io/markup-task-7/">ДЕМО</a>
 Перед выполнением задания внимательно прочитайте:
 
 - [О всех этапах проверки задания](https://github.com/urfu-2016/guides/blob/master/workflow/extra.md)
